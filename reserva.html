@@ -175,21 +175,7 @@
 
 </body>
 </html>
-        const result = await res.json();
-        if (result.status === 'success') {
-          // Mostrar confirmación
-          confirmationDiv.style.display = 'block';
-          whatsappLink.href = `https://wa.me/1234567890?text=Hola,%20quiero%20confirmar%20mi%20turno%20para%20el%20${reservationData.date}%20a%20las%20${reservationData.time}%20(${reservationData.service})`;
-          reservationForm.reset();
-          timeSelect.innerHTML = '<option value="">Selecciona un horario</option>';
-        } else {
-          alert('Error: ' + result.message);
-        }
-      } catch (error) {
-        console.error('Error enviando reserva:', error);
-        alert('No se pudo procesar la reserva. Intenta nuevamente.');
-      }
-    });
+      
   </script>
 </body>
 </html>
